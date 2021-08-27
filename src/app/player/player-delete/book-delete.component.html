@@ -1,0 +1,27 @@
+<div id="a"><h1>Bạn có muốn xóa sản phẩm sau không ?</h1>
+<div  class="div-size">
+  <table class="table-size">
+    <tr>
+      <td class="td-font td-size">tiêu đề</td>
+      <td>{{book.title}}</td>
+    </tr>
+    <tr>
+      <td class="td-font td-size">Tác giả</td>
+      <td>{{book.author}}</td>
+    </tr>
+
+    <tr>
+      <td class="td-font td-size"> Mô tả</td>
+      <td>{{book.description}}</td>
+    </tr>
+  </table>
+
+
+</div>
+  <label style="margin-left: 10%">
+<button class="btn btn-danger" (click)="deleteThisBook()">Xoá</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <button  class="btn btn-success" routerLink="">Thoát</button>
+  </label>
+</div>
+

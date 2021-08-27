@@ -1,0 +1,20 @@
+#a {
+  width: 1000px;
+  height: 200px;
+
+  margin: 50px auto;
+}
+
+.td-size{
+  width: 10%; height: 45px;
+}
+.td-font{
+  font-weight: bold;
+}
+.div-size{
+  width: 75%;
+  margin-left: 50px;
+}
+.table-size{
+  width: 70%;
+}
