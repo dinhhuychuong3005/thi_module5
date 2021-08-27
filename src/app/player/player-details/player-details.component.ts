@@ -9,7 +9,7 @@ import {Iplayer} from '../../model/iplayer';
   styleUrls: ['./player-details.component.css']
 })
 export class PlayerDetailsComponent implements OnInit {
-  book: Iplayer = {
+  player: Iplayer = {
 
   };
   id: number;
@@ -19,8 +19,8 @@ export class PlayerDetailsComponent implements OnInit {
   ) {
     this.activatedRoute.paramMap.subscribe(data1 => {
       this.id = +data1.get('id');
-      this.bookService.findBookById(this.id).subscribe(data => {
-        this.book = data;
+      this.bookService.findPlayerById(this.id).subscribe(data => {
+        this.player = data;
       });
     });
   }
