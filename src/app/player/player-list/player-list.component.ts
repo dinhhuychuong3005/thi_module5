@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {BookService} from '../../service/book.service';
-import {IBooks} from '../../model/ibooks';
+import {PlayerService} from '../../service/player.service';
+import {Iplayer} from '../../model/iplayer';
 
 @Component({
   selector: 'app-book-list',
-  templateUrl: './book-list.component.html',
-  styleUrls: ['./book-list.component.css']
+  templateUrl: './player-list.component.html',
+  styleUrls: ['./player-list.component.css']
 })
-export class BookListComponent implements OnInit {
+export class PlayerListComponent implements OnInit {
 
-  books: IBooks[] = [];
-  constructor(private bookService: BookService,
+  players: Iplayer[] = [];
+  constructor(private playerService: PlayerService,
               private router: Router
   ) { }
 
@@ -20,8 +20,8 @@ export class BookListComponent implements OnInit {
   }
 
   private reloadData() {
-    this.bookService.getAllBooks().subscribe(data => {
-      this.books = data;
+    this.playerService.getAllPlayers().subscribe(data => {
+      this.players = data;
     }, error => console.log(error));
   }
 

@@ -1,20 +1,20 @@
 import {Component, OnInit} from '@angular/core';
-import {BookService} from '../../service/book.service';
+import {PlayerService} from '../../service/player.service';
 import {ActivatedRoute} from '@angular/router';
-import {IBooks} from '../../model/ibooks';
+import {Iplayer} from '../../model/iplayer';
 
 @Component({
   selector: 'app-book-details',
-  templateUrl: './book-details.component.html',
-  styleUrls: ['./book-details.component.css']
+  templateUrl: './player-details.component.html',
+  styleUrls: ['./player-details.component.css']
 })
-export class BookDetailsComponent implements OnInit {
-  book: IBooks = {
+export class PlayerDetailsComponent implements OnInit {
+  book: Iplayer = {
 
   };
   id: number;
 
-  constructor(private bookService: BookService,
+  constructor(private bookService: PlayerService,
               private activatedRoute: ActivatedRoute
   ) {
     this.activatedRoute.paramMap.subscribe(data1 => {

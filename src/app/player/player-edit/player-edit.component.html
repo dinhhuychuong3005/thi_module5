@@ -1,0 +1,46 @@
+<div id="a"><h1>Tạo mới player</h1>
+<h2 style="color: brown">{{message}}</h2>
+<form [formGroup]= "editPlayerForm" >
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" formControlName="name" placeholder="name">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+         class="alert alert-danger">
+      <div *ngIf="name.errors.required">
+        Name không được để trống!
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Champ</label>
+      <input type="text" class="form-control" formControlName="champ"  placeholder="champ">
+      <div *ngIf="champ.invalid && (champ.dirty || champ.touched)"
+           class="alert alert-danger">
+
+        <div *ngIf="champ.errors.required">
+          Champ không được để trống!
+        </div>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Mô tả</label>
+      <input type="text" class="form-control" formControlName="kda" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="kda">
+      <div *ngIf="kda.invalid && (kda.dirty || kda.touched)"
+           class="alert alert-danger">
+        <div *ngIf="kda.errors.required">
+          Phải có kda
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Des</label>
+      <input type="text" class="form-control" formControlName="des"  placeholder="des">
+
+    </div>
+  </div>
+  <button type="submit" [disabled]="editPlayerForm.invalid" class="btn btn-primary" (click)="submit()">Submit</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <button  class="btn btn-success" routerLink="">Thoat</button>
+</form>
+</div>
+

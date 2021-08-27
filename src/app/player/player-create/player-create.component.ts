@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {BookService} from '../../service/book.service';
+import {PlayerService} from '../../service/player.service';
 
 @Component({
   selector: 'app-book-create',
@@ -13,7 +13,7 @@ export class PlayerCreateComponent implements OnInit {
   message: string;
 
   constructor(
-    private bookService: BookService
+    private bookService: PlayerService
   ) {
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IBooks} from '../../model/ibooks';
-import {BookService} from '../../service/book.service';
+import {Iplayer} from '../../model/iplayer';
+import {PlayerService} from '../../service/player.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -11,9 +11,9 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class PlayerDeleteComponent implements OnInit {
 
   id: number;
-  book: IBooks = {};
+  book: Iplayer = {};
   message: string;
-  constructor(private bookService: BookService,
+  constructor(private bookService: PlayerService,
               private activatedRoute: ActivatedRoute,
               private router: Router
   ) { }
