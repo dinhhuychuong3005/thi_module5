@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {BookListComponent} from './player/player-list/book-list.component';
 import {PlayerCreateComponent} from './player/player-create/player-create.component';
-import {BookDeleteComponent} from './player/player-delete/book-delete.component';
+import {PlayerDeleteComponent} from './player/player-delete/player-delete.component';
 import {BookEditComponent} from './player/player-edit/book-edit.component';
 import {BookDetailsComponent} from './player/player-details/book-details.component';
 
@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'books', pathMatch: 'full'},
   {path: 'books', component: BookListComponent},
   {path: 'player/add', component: PlayerCreateComponent},
-  {path: 'delete/:id', component: BookDeleteComponent},
+  {path: 'delete/:id', component: PlayerDeleteComponent},
   {path: 'edit/:id', component: BookEditComponent},
   {path: 'details/:id', component: BookDetailsComponent}
   ];

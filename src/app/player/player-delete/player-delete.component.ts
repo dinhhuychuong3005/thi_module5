@@ -5,10 +5,10 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-book-delete',
-  templateUrl: './book-delete.component.html',
-  styleUrls: ['./book-delete.component.css']
+  templateUrl: './player-delete.component.html',
+  styleUrls: ['./player-delete.component.css']
 })
-export class BookDeleteComponent implements OnInit {
+export class PlayerDeleteComponent implements OnInit {
 
   id: number;
   book: IBooks = {};
