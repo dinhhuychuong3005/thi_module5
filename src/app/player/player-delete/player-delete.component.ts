@@ -11,24 +11,24 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class PlayerDeleteComponent implements OnInit {
 
   id: number;
-  book: Iplayer = {};
+  player: Iplayer = {};
   message: string;
-  constructor(private bookService: PlayerService,
+  constructor(private playerService: PlayerService,
               private activatedRoute: ActivatedRoute,
               private router: Router
   ) { }
 
   ngOnInit(): void {
     this.id = +this.activatedRoute.snapshot.paramMap.get('id');
-    this.bookService.findBookById(this.id).subscribe(data => {
-      this.book = data;
+    this.playerService.findPlayerById(this.id).subscribe(data => {
+      this.player = data;
     });
   }
 
-  deleteThisBook() {
-    this.bookService.deleteBook(this.id).subscribe(data => {
+  deleteThisPlayer() {
+    this.playerService.deletePlayer(this.id).subscribe(data => {
       alert('xóa thành cônng')
-      this.router.navigate(['/player'])
+      this.router.navigate(['/players'])
     });
 
   }

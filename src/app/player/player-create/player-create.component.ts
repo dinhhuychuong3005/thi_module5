@@ -9,28 +9,29 @@ import {PlayerService} from '../../service/player.service';
 })
 export class PlayerCreateComponent implements OnInit {
 
-  addBookForm: FormGroup;
+  playerForm: FormGroup;
   message: string;
 
   constructor(
-    private bookService: PlayerService
+    private playerService: PlayerService
   ) {
   }
 
   ngOnInit(): void {
-    this.addBookForm = new FormGroup({
-      title: new FormControl('', [Validators.required, Validators.maxLength(30)]),
-      author: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required, Validators.minLength(10)])
+    this.playerForm = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      champ: new FormControl('', [Validators.required]),
+      kda: new FormControl('', [Validators.required]),
+      des: new FormControl()
     });
   }
 
   submit() {
-    const data = this.addBookForm.value;
+    const data = this.playerForm.value;
     console.log(data);
-    this.bookService.createBook(data).subscribe(dataSave => {
+    this.playerService.createPlayer(data).subscribe(dataSave => {
       console.log(dataSave);
-      console.log(this.bookService.getAllBooks());
+      console.log(this.playerService.getAllPlayers());
       this.message = 'Bạn đã thêm mới thành công';
     }, e => {
       console.log(e);
@@ -38,16 +39,17 @@ export class PlayerCreateComponent implements OnInit {
 
   }
 
-  get title() {
-    return this.addBookForm.get('title');
+  get name() {
+    return this.playerForm.get('name');
   }
-
-  get author() {
-    return this.addBookForm.get('author');
+  get champ() {
+    return this.playerForm.get('champ');
   }
-
-  get description() {
-    return this.addBookForm.get('description');
+  get kda() {
+    return this.playerForm.get('kda');
+  }
+  get des() {
+    return this.playerForm.get('des');
   }
 
 }

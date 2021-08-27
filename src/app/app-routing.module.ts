@@ -8,7 +8,7 @@ import {PlayerEditComponent} from './player/player-edit/player-edit.component';
 import {PlayerDetailsComponent} from './player/player-details/player-details.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'books', pathMatch: 'full'},
+  {path: '', redirectTo: 'players', pathMatch: 'full'},
   {path: 'players', component: PlayerListComponent},
   {path: 'player/add', component: PlayerCreateComponent},
   {path: 'delete/:id', component: PlayerDeleteComponent},
