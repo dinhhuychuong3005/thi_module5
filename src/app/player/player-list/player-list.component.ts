@@ -33,7 +33,7 @@ export class PlayerListComponent implements OnInit {
     this.router.navigate(['delete', id]);
   }
 
-  editBook(id: number) {
+  editPlayer(id: number) {
     this.router.navigate(['edit', id]);
   }
 
